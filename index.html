@@ -1,99 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>formulário</title> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>formulário</title> 
 </head>
 <body>
-    <div>
-         <h1> Exercício de Formulário</h1>
-         <p> Pressionme ALT + tecla sublinhada para acessa os campos rapidamente .use tab para naverga entre os campos</p>
-         <form name="formulário">
-            <label for="nome"> Nome Completo:</label>
-            <input type="tex" name="text" maxlength="50" minlength="3" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+">
-            <br>
-            <label for="email">E -mail:</label>
-            <input type="email" name="email" required>
-            <br>
-            <label for="cpf"> CPF:</label>
-            <input type="text" name="cpf" required pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}">
-            <br>
-            <label for="usuario"> Usuário</label>
-            <input type="radio" value="Aluno" name="radiousuario"> 
-            <label >Aluno</label>
-            <input type="radio" value="Professor" name="radiousuario">
+  <div class="form">
+    <h1> Exercício de Formulário</h1>
+    <p> Pressionme ALT + tecla sublinhada para acessa os campos rapidamente .use tab para naverga entre os campos</p>
+    <form name="formulário">
+
+      <div class="formgroud">
+        <label for="nome"> Nome Completo*:</label>
+        <input type="text"  name="nome" maxlength="50" 
+        minlength="3" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+">
+        <span class="aviso"> Nome dever conter apenas letras e ter no mínino 3 caracteres</span>
+      </div>
+      <br>
+      <div class="formgroud">
+        <label for="email">E -mail*:</label>
+        <input type="email" name="email" required>
+        <span class="aviso"> Insira um Email valido(exemplo: usuario@dominio.com)</span>
+        
+      </div>
+      <br>
+      <div class="formgroud">
+        <label for="cpf"> CPF*:</label>
+        <input type="text" name="cpf" required pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}">
+      </div>
+      <br>
+      <div class="formgroud">
+        <label name="telefone"> Telefone*:</label>
+        <input type="tel" name="telefone" required pattern="(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{4})|([0-9]{10,11})">
+        
+      </div>
+      <br>
+      <div class="formgroud">
+        <label name="website">sites*:</label>
+        <input type="url" name="website" required>
+                
+      </div>
+      <br>
+      <div class="formgroud">
+        
+        <label name="datanasc">Data de nascimento*:</label>
+        <input type="date" name="datanasc" required>
+      </div>
+      <br>
+      <div class="formgroud">
+        <label for="estado"> Estados</label>
+        <select id="estado" name="estado">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+      </div>
+      <br>
+      <div class="formgroud">
+        <label for="senha"> Senha*:</label>
+        <input type="password" name="senha" required pattern="(?=.
+        *\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+      </div>
+      <br>
+      
+      <div class="formgroud">
+        <label for="csenha"> Cofirma a senha*:</label>
+        <input type="password" name="csenha" required pattern="(?=.
+        *\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+      </div>
+        <div class="formgroud">
+          <label for="usuario"> Usuário*:</label>
+          <input type="radio" value="Aluno" name="radiousuario"> 
+          <br>
+          <label >Aluno</label>
           <label >Professor</label>
-            <input type="radio" value="visitante" name="radiousuario">
-            <label> Visitantes</label>
+          <input type="radio" value="Professor" name="radiousuario">
+          <input type="radio" value="visitante" name="radiousuario">
+          <label> Visitantes</label>
+          
+        </div>
+        <br>
+        <div class="formgroud">
+          <label for="cor">Cor Preferida:</label>
+          <input type="color" name cor>
+        </div>
+        <label for="nivel"> Nivel de Conhecimento em HTML:</label>
+        <input type="range" min="1" max="5">
+      
+        <input type="checkbox" name="termo">
+        <label for="termo"> Concordo com os termos e condições:</label><br>
+        
+        <br>
+        
+     
             <br>
-            <label name="telefone"> Telefone:</label>
-            <input type="tel" name="telefone" required pattern="(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{4})|([0-9]{10,11})">
-            <br>
-            <label name="datanasc">Data de nascimento:</label>
-            <input type="date" name="datanasc" required>
-            <br>
-            <label name="website">sites</label>
-            <input type="url" name="website" required>
-            <br>
-            <label for="estado"> Estados</label>
-    <select id="estado" name="estado">
-    <option value="AC">Acre</option>
-    <option value="AL">Alagoas</option>
-    <option value="AP">Amapá</option>
-    <option value="AM">Amazonas</option>
-    <option value="BA">Bahia</option>
-    <option value="CE">Ceará</option>
-    <option value="DF">Distrito Federal</option>
-    <option value="ES">Espírito Santo</option>
-    <option value="GO">Goiás</option>
-    <option value="MA">Maranhão</option>
-    <option value="MT">Mato Grosso</option>
-    <option value="MS">Mato Grosso do Sul</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="PA">Pará</option>
-    <option value="PB">Paraíba</option>
-    <option value="PR">Paraná</option>
-    <option value="PE">Pernambuco</option>
-    <option value="PI">Piauí</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="RN">Rio Grande do Norte</option>
-    <option value="RS">Rio Grande do Sul</option>
-    <option value="RO">Rondônia</option>
-    <option value="RR">Roraima</option>
-    <option value="SC">Santa Catarina</option>
-    <option value="SP">São Paulo</option>
-    <option value="SE">Sergipe</option>
-    <option value="TO">Tocantins</option>
-    <option value="EX">Estrangeiro</option>
-         </select>
-            <br>
-            <label for="senha"> Senha</label>
-            <input type="password" name="senha" required pattern="(?=.
-*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
-            <br>
-            <label for="csenha"> Cofirma a senha</label>
-            <input type="password" name="csenha" required pattern="(?=.
-*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
-            <br>
-            <label for="cor">Cor Preferida</label>
-            <input type="color" name cor>
-            <br>
-            <label for="nivel"> Nivel de Conhecimento em HTML</label>
-            <input type="range" min="1" max="5">
-            <br>
-            <label for="termo"> Concordo com os termos e condições:</label><br>
-            <input type="checkbox" name="termo">
             <br>
             <label for="mensagens">Mensagem</label>
             <br>
             <textarea name="mensagem" rows="5"></textarea>
-          <br>
+            <br>
             <input type="submit" value="Envia Cadastro">
             <input type="reset" value="Limpar Formulário">
-
-
+            
+            
          </form>
     </div>
 </body>

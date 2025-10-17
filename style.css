@@ -47,7 +47,31 @@ input:invalid{
 input:invalid + .aviso{
     display: block;  
 }
-
+input#cor{
+    width: 600px;
+    height: 18px;
+}
+input#nivel{
+    width: 600px;
+    height:18px
+}
+input#termo{
+    width: 30px;
+    
+}
+button{
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+}
+button:hover{
+    background-color: #3367d6;
+}
 input:focus, section:focus, textarea:focus, button:focus{
     outline: 3px solid #4285F4;
     box-shadow: 0 0 8PX (66, 133, 244, 0.6);

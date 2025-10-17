@@ -29,18 +29,20 @@
       <div class="formgroud">
         <label for="cpf"> CPF*:</label>
         <input type="text" name="cpf" required pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}">
+        <span class="aviso"> Insira CPF válido (ex: 123.456.789-00 ou 12345678900)</span>
       </div>
       <br>
       <div class="formgroud">
         <label name="telefone"> Telefone*:</label>
         <input type="tel" name="telefone" required pattern="(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{4})|([0-9]{10,11})">
+        <span class="aviso"> Insira um telefone válido (ex: (11) 98765-4321 ou 11987654321)</span>
         
       </div>
       <br>
       <div class="formgroud">
         <label name="website">sites*:</label>
         <input type="url" name="website" required>
-                
+        
       </div>
       <br>
       <div class="formgroud">
@@ -85,15 +87,14 @@
       <br>
       <div class="formgroud">
         <label for="senha"> Senha*:</label>
-        <input type="password" name="senha" required pattern="(?=.
-        *\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+        <input type="password" name="senha" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+        <span class="aviso"> A senha deve conter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas números e caracteres especia</span>
       </div>
       <br>
-      
       <div class="formgroud">
         <label for="csenha"> Cofirma a senha*:</label>
-        <input type="password" name="csenha" required pattern="(?=.
-        *\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+        <input type="password" name="csenha" required tabindex="9" >
+        <span class="aviso">As senha devem ser iguais</span>
       </div>
         <div class="formgroud">
           <label for="usuario"> Usuário*:</label>
@@ -109,27 +110,30 @@
         <br>
         <div class="formgroud">
           <label for="cor">Cor Preferida:</label>
-          <input type="color" name cor>
+          <input type="color" id="cor" name="cor" accesskey="o" tabindex="10">
         </div>
-        <label for="nivel"> Nivel de Conhecimento em HTML:</label>
-        <input type="range" min="1" max="5">
-      
-        <input type="checkbox" name="termo">
-        <label for="termo"> Concordo com os termos e condições:</label><br>
+        <div class=" formgroud">
+          
+          <label for="nivel"> Nivel de Conhecimento em HTML:</label>
+          <input type="range" id="nivel" min="1" max="5">
+        </div>
         
+        <div class=" formgroud">
+          <label for="termo">
+            <input type="checkbox" id="termo" name="termo"> 
+             Concordo com os termos e condições:</label><br>
+        </div>
+        <label for="mensagens">Mensagem</label>
         <br>
-        
-     
-            <br>
-            <br>
-            <label for="mensagens">Mensagem</label>
-            <br>
-            <textarea name="mensagem" rows="5"></textarea>
-            <br>
-            <input type="submit" value="Envia Cadastro">
-            <input type="reset" value="Limpar Formulário">
+        <textarea name="mensagem" rows="5"></textarea>
+        <br>
+        <div class="form-button">
+         <button type="submit" tabindex="15">envia cadastro</button>
+         <button type="reset" tabindex="14">Limpar formulário</button>
+              
+            </div>
             
-            
+           
          </form>
     </div>
 </body>
